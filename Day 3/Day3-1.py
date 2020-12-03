@@ -8,7 +8,6 @@ stepY = 1
 treesHit = 0
 for tobogganY in data:
     if tobogganY[tobogganX] == "#":
-        #print("Tree hit!")
         treesHit += 1
     if tobogganY[tobogganX] == "#":
         tobogganY = tobogganY[:tobogganX] + 'X' + tobogganY[tobogganX + 1:]

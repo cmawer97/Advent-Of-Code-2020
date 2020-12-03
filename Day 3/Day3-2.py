@@ -1,15 +1,14 @@
 # Takes a list of strings representing a slope and the X/Y stepping of the toboggan, returns how many times the toboggan hits a tree
-def findTreesHit(slope, stepX, stepY):
+def findTreesHit(slope, stepX, stepY, printSlope=False):
     treesHit = 0
     tobogganX = 0
     for tobogganY in slope[::stepY]:
         if tobogganY[tobogganX] == "#":
             treesHit += 1
-        if tobogganY[tobogganX] == "#":
             tobogganY = tobogganY[:tobogganX] + 'X' + tobogganY[tobogganX + 1:]
         else:
             tobogganY = tobogganY[:tobogganX] + 'O' + tobogganY[tobogganX + 1:]
-        print(tobogganY)
+        if printSlope: print(tobogganY)
         tobogganX = (tobogganX + stepX) % len(tobogganY)
     return treesHit
 
