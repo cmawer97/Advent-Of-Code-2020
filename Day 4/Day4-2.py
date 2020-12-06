@@ -29,7 +29,7 @@ def check_hgt(s):
             print(s + " failed hgt check (cm)")
             return False
     elif s[-2:] == "in":
-        if int(s[4:-2]) in range(59,76):
+        if int(s[4:-2]) in range(59,77):
             return True
         else:
             print(s + " failed hgt check (in)")
